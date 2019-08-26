@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Dark Mode Test</string>
+    <string name="dark_mode_always">Dark Mode: Always</string>
+    <string name="dark_mode_never_button">Dark Mode: Never</string>
+    <string name="dark_mode_follow_battery_saving_mode_button">Dark Mode: Battery Saving Mode</string>
+    <string name="dark_mode_follow_theme_button">Dark Mode: Device\'s theme</string>
+    <string name="dark_mode_unspecified_button">Dark Mode: Unspecified</string>
+    <string name="dark_mode">Day</string>
+</resources>

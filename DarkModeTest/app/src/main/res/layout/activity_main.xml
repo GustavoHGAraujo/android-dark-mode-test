@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:context=".MainActivity">
+
+    <TextView
+            style="@style/TextAppearance.AppCompat.Display3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="24dp"
+            android:text="@string/dark_mode"/>
+
+    <Button
+            android:id="@+id/dark_mode_always_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_mode_always"/>
+
+    <Button
+            android:id="@+id/dark_mode_never_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_mode_never_button"/>
+
+    <Button
+            android:id="@+id/dark_mode_follow_battery_saving_mode_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_mode_follow_battery_saving_mode_button"/>
+
+    <Button
+            android:id="@+id/dark_mode_follow_theme_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_mode_follow_theme_button"/>
+
+    <Button
+            android:id="@+id/dark_mode_unspecified_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_mode_unspecified_button"/>
+
+    <TextView
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:id="@+id/android_version_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="24dp"
+            tools:text="Android API"/>
+
+</LinearLayout>
