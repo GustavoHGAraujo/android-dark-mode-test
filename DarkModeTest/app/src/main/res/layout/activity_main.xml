@@ -1,58 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="16dp"
         android:gravity="center"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
     <TextView
             style="@style/TextAppearance.AppCompat.Display3"
+            android:id="@+id/dark_mode_current_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_margin="24dp"
-            android:text="@string/dark_mode"/>
-
-    <Button
-            android:id="@+id/dark_mode_always_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dark_mode_always"/>
-
-    <Button
-            android:id="@+id/dark_mode_never_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dark_mode_never_button"/>
-
-    <Button
-            android:id="@+id/dark_mode_follow_battery_saving_mode_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dark_mode_follow_battery_saving_mode_button"/>
-
-    <Button
-            android:id="@+id/dark_mode_follow_theme_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dark_mode_follow_theme_button"/>
-
-    <Button
-            android:id="@+id/dark_mode_unspecified_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dark_mode_unspecified_button"/>
+            android:gravity="center"
+            android:text="@string/dark_mode_current"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dark_mode_spinner_label_view"/>
 
     <TextView
-            style="@style/TextAppearance.AppCompat.Body1"
+            android:id="@+id/dark_mode_spinner_label_view"
+            style="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintBottom_toTopOf="@id/dark_mode_spinner_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dark_mode_current_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:text="Dark mode" />
+
+    <Spinner
+            android:id="@+id/dark_mode_spinner_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dark_mode_spinner_label_view"
+            android:layout_width="0dp"
+            android:layout_height="56dp" />
+
+    <TextView
             android:id="@+id/android_version_text_view"
+            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_margin="24dp"
-            tools:text="Android API"/>
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/dark_mode_spinner_view"
+            tools:text="Android API" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
